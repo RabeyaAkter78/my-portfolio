@@ -37,17 +37,31 @@ const Contact = () => {
 
                     <div className="w-[60%] h-full py-10 bg-gradient-to-r from-slate-700 to-slate-950 shadow-2xl flex flex-col gap-8 p-8 rounded-lg">
                         <form className="w-full" >
-                            <div>
+                            <div className="flex gap-10 mb-4">
                                 <div className="w-1/2 flex flex-col gap-4">
                                     <p className="text-sm text-gray-400 uppercase">Your Name</p>
                                     <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none" type="text" />
                                 </div>
                                 <div className="w-1/2 flex flex-col gap-4">
-                                    <p className="text-sm text-gray-400 uppercase">Your Name</p>
+                                    <p className="text-sm text-gray-400 uppercase">phone number</p>
                                     <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none" type="text" />
                                 </div>
                             </div>
-
+                            <div >
+                                <p className="text-sm text-gray-400 uppercase">Email</p>
+                                <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-4 " type="text" />
+                            </div>
+                            <div >
+                                <p className="text-sm text-gray-400 uppercase">Subject</p>
+                                <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-10" type="text" />
+                            </div>
+                            <div >
+                                <p className="text-sm text-gray-400 uppercase">Message</p>
+                                <textarea className="w-full h-48 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-10" type="text" />
+                            </div>
+                            <div>
+                                <button className='btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-white'>Send </button>
+                            </div>
                         </form>
                     </div>
 
