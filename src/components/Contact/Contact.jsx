@@ -15,8 +15,8 @@ const Contact = () => {
                         <img className="rounded-lg " src={img} alt="" />
                         <div className="flex flex-col gap-4">
                             <h3 className="text-2xl font-bold text-white">Rabeya Akter</h3>
-                            <p className="text-lg font-normal text-gray-400">MERN stact Developer</p>
-                            <p className="text-base text-gray-400 tracking-wide">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, optio!</p>
+                            <p className="text-lg font-normal text-gray-400">Bagerhat,Bangladesh.</p>
+                           
                             <p className="text-base text-gray-400 flex items-center gap-2"
                             > Phone: <span className="text-yellow-50">+88 01969-687876</span></p>
                             <p className="text-base text-gray-400 flex items-center gap-2"
