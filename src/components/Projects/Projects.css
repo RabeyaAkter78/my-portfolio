@@ -1,0 +1,31 @@
+.projects-cards .cardd {
+    height: 425px;
+    border: 1px solid aqua;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+.projects-cards .cardd:hover {
+    box-shadow: 2px 2px 20px aqua;
+}
+
+.projects-cards .cardd img {
+    width: 100%;
+    border-radius: 5px;
+    height: 500px;
+}
+
+
+.projects-cards .cardd img {
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    height: 300px;
+    transition: 4s all ease;
+}
+
+
+
+.projects-cards .cardd:hover img {
+    object-position: bottom;
+}
