@@ -7,7 +7,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
 
 
-    <div className='w-full h-auto font-serif'>
+    <div className='w-full h-auto font-serif overflow-x-hidden'>
       <App />
     </div>
 

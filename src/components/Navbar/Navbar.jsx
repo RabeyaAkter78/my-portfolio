@@ -55,7 +55,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <li>
+                    <li className='list-none' >
                         <label className="swap swap-rotate ml-4 mt-2 h-[15px] w-[15px]">
 
                             {/* this hidden checkbox controls the state */}
