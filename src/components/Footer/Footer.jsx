@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import github from "../../assets/images/github.png";
 import Linkedin from "../../assets/images/Linkedin.png";
-
+import twitter from '../../assets/images/projects/danceAcademy/twitter.png'
 const Footer = () => {
     return (
         <div>
@@ -21,7 +21,9 @@ const Footer = () => {
                         <a href="https://www.linkedin.com/in/rabeya-akter-52662622a">
                             <img className="fill-current" src={Linkedin} alt="" />
                         </a>
-
+                        <a href="https://twitter.com/rabeyariya96859?t=PmBXNP1aPyMDrciMh56aUw&s=08&fbclid=IwAR334O4ZCGiiCSzFYDjCtmwvHEDgNNkkp2iiYYNKVVIod28p42izleWIS7k">
+                           <img className="fill-current" src={twitter} alt="" />
+                        </a>
 
                     </div>
                 </div>

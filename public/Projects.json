@@ -1,7 +1,7 @@
 [
     {
         "_id": "1",
-        "image": "path/to/image1.jpg",
+        "image": "https://ibb.co/jR9NDDp",
         "heading": "Project 1",
         "sub_heading": "Project description goes here",
         "technologies": [

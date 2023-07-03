@@ -21,8 +21,8 @@ const Banner = () => {
                     data-aos-delay="50"
                     data-aos-duration="1000"
                 >
-                    <div className="flex flex-col gap-5 mb-20">
-                        <h4 className="text-lg">WELCOME TO RABEYA'S WORLD</h4>
+                    <div className="flex flex-col gap-5 mb-20 overflow-x-hidden">
+                        <h4 className="text-lg uppercase">WELCOME TO My Portfolio!</h4>
                         <h1 className="text-5xl lg:text-6xl font-bold ">Hi, I'm <span className="text-sky-900">RABEYA AKTER</span></h1>
                         <h2 className="text-3xl lg:text-4xl font bold ">A <span>{text}</span>
                             <Cursor

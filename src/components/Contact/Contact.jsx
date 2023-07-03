@@ -1,10 +1,12 @@
 import SectionTitle from "../SectionTitle/SectionTitle";
 import img from '../../assets/images/projects/danceAcademy/contact.jpg'
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaTwitter, } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
-import { useRef } from "react";
-
+import { useRef, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 const Contact = () => {
+    const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -13,8 +15,12 @@ const Contact = () => {
         emailjs.sendForm('service_752yot8', 'template_d4qqvbq', form.current, '5_yiMAnfYPHBXCqBp')
             .then((result) => {
                 console.log(result.text);
+                setIsFormSubmitted(true);
+                form.current.reset();
+                toast.success("Message sent successfully!");
             }, (error) => {
                 console.log(error.text);
+                toast.error("Failed to send message. Please try again.")
             });
     };
 
@@ -93,9 +99,15 @@ const Contact = () => {
                         </form>
                     </div>
 
+
                 </div>
             </div>
-
+            {isFormSubmitted && (
+                <Toaster
+                    position="top-center"
+                    reverseOrder={false}
+                />
+            )}
         </section>
     );
 };
