@@ -6,6 +6,8 @@ import {  FaGithub, FaRegArrowAltCircleUp } from "react-icons/fa";
 // import { useEffect, useState } from "react";
 import './Projects.css';
 const Projects = () => {
+// TODO: THE PROJECTS MUST HAVE TO DYNAMIC;
+
 // const [projectsInfo,setProjectsInfo]=useState([]);
 
 // useEffect(() => {
@@ -26,11 +28,12 @@ const Projects = () => {
             ></SectionTitle>
 
 
-            <div className="flex justify-center items-center gap-6">
-                <div className="card w-96 bg-slate-400 px-4 py-4 rounded-lg shadow-2xl bg-gradient-to-r from-transparent via-transparent to-neutral-700  group-hover:bg-gradient-to-b hover:from-gray-900 hover:bg-gray-900 transition-colors duration-1000">
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 md:gap-8 lg:gap-6 items-center ml-16 lg:ml-2">
+            {/* <div className="flex justify-center items-center gap-6"> */}
+                <div className="card w-96 h-96 bg-slate-400 px-2 lg:px-4 py-3 lg:py-4 rounded-lg shadow-2xl bg-gradient-to-r from-transparent via-transparent to-neutral-700  group-hover:bg-gradient-to-b hover:from-gray-900 hover:bg-gray-900 transition-colors duration-1000">
                     <figure>
 
-                        <img src={img1} alt="Shoes" className="rounded-xl w-full h-[80%] object-cover group-hover:scale-x-150 duration-300 cursor-pointer" />
+                        <img src={img1} alt="Shoes" className="rounded-xl w-full h-auto object-cover group-hover:scale-x-150 duration-300 cursor-pointer" />
                     </figure>
                     <div className="card-body items-center text-center">
                         <p className="text-black">A full stack project of an e-learning platform.</p>
@@ -47,54 +50,54 @@ const Projects = () => {
                             </a>
 
                             <a href="https://github.com/RabeyaAkter78/dance-academt-server">
-                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Server-side"><FaGithub></FaGithub></button>
+                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2  shadow-2xl shadow-black text-sky-950' data-tip="Server-side"><FaGithub></FaGithub></button>
                             </a>
 
                         </div>
                     </div>
                 </div>
 
-                <div className="card w-96 bg-slate-400 px-4 py-4 rounded-lg shadow-2xl bg-gradient-to-r from-transparent via-transparent to-neutral-700  group-hover:bg-gradient-to-b hover:from-gray-900 hover:bg-gray-900 transition-colors duration-1000">
-                    <figure className="">
-                        <img src={img2} alt="Shoes" className="rounded-xl w-full h-[80%] object-cover group-hover:scale-110 duration-300 cursor-pointer" />
+                <div className="card w-96 h-96 bg-slate-400 px-2 lg:px-4 py-3 lg:py-4 rounded-lg shadow-2xl bg-gradient-to-r from-transparent via-transparent to-neutral-700  group-hover:bg-gradient-to-b hover:from-gray-900 hover:bg-gray-900 transition-colors duration-1000">
+                    <figure>
+                        <img src={img2} alt="Shoes" className="rounded-xl w-full h-auto  object-cover group-hover:scale-110 duration-300 cursor-pointer" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <p>This is a virtual Toy store website</p>
+                        <p className="text-black" >This is a virtual Toy store website</p>
                         <div className="card-actions flex">
 
                             <a href="https://kidolls-client.web.app/">
-                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Live-preview"><FaRegArrowAltCircleUp></FaRegArrowAltCircleUp></button>
+                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2   shadow-2xl shadow-black text-sky-950' data-tip="Live-preview"><FaRegArrowAltCircleUp></FaRegArrowAltCircleUp></button>
                             </a>
 
                             <a href="https://github.com/RabeyaAkter78/kidolls-client">
-                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Client-side"><FaGithub></FaGithub></button>
+                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow-2xl shadow-black text-sky-950' data-tip="Client-side"><FaGithub></FaGithub></button>
                             </a>
                             <a href="https://github.com/RabeyaAkter78/kidolls-server">
-                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Server-side"><FaGithub></FaGithub></button>
+                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2  shadow-2xl shadow-black text-sky-950' data-tip="Server-side"><FaGithub></FaGithub></button>
                             </a>
 
                         </div>
                     </div>
                 </div>
-                <div className="card w-96 bg-slate-400 px-4 py-4 rounded-lg shadow-2xl bg-gradient-to-r from-transparent via-transparent to-neutral-700  group-hover:bg-gradient-to-b hover:from-gray-900 hover:bg-gray-900 transition-colors duration-1000">
+                <div className="card w-96 h-96 bg-slate-400 px-2 lg:px-4 py-3 lg:py-4 rounded-lg shadow-2xl bg-gradient-to-r from-transparent via-transparent to-neutral-700  group-hover:bg-gradient-to-b hover:from-gray-900 hover:bg-gray-900 transition-colors duration-1000">
                     <figure className="">
-                        <img src={img3} alt="Shoes" className="rounded-xl w-full h-[80%] object-cover group-hover:scale-110 duration-300 cursor-pointer" />
+                        <img src={img3} alt="Shoes" className="rounded-xl w-full h-auto object-cover group-hover:scale-110 duration-300 cursor-pointer" />
                     </figure>
                     <div className="card-body items-center text-center">
-                        <p>This is a Cooking website</p>
+                        <p className="text-black">This is a Cooking website</p>
                         <div className="card-actions flex">
 
                             <a href="https://the-chefs-pantry-client.web.app/">
-                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Live-preview"><FaRegArrowAltCircleUp></FaRegArrowAltCircleUp></button>
+                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2  shadow-2xl shadow-black text-sky-950' data-tip="Live-preview"><FaRegArrowAltCircleUp></FaRegArrowAltCircleUp></button>
                             </a>
 
                             <a href="https://github.com/RabeyaAkter78/the-chefs-pantry-client">
-                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Client-side"><FaGithub></FaGithub></button>
+                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2  shadow-2xl shadow-black text-sky-950' data-tip="Client-side"><FaGithub></FaGithub></button>
                             </a>
 
 
                             <a href="https://github.com/RabeyaAkter78/the-chefs-pantry-server">
-                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Server-side"><FaGithub></FaGithub></button>
+                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2  shadow-2xl shadow-black text-sky-950' data-tip="Server-side"><FaGithub></FaGithub></button>
                             </a>
                            
                         </div>

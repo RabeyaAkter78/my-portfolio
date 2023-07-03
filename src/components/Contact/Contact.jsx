@@ -1,6 +1,6 @@
 import SectionTitle from "../SectionTitle/SectionTitle";
 import img from '../../assets/images/projects/danceAcademy/contact.jpg'
-import { FaFacebook, FaLinkedin, } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
 
@@ -22,14 +22,15 @@ const Contact = () => {
         <section id="contact" className="w-full pt-10 pb-20 px-2 border-b-[1px] border-b-black">
 
             <SectionTitle
-                subHeading={"Contact"}
-                heading={"COntact With me"}
+                subHeading={"Feel free to contact me"}
+                heading={"contact"}
             ></SectionTitle>
-            <div className="w-full  ">
-                <div className="w-full h-auto flex justify-between ">
-                    <div className="w-[35%] h-full bg-gradient-to-r from-slate-700 to-slate-950 p-2 shadow-2xl flex flex-col gap-8 justify-center">
+            <div className="w-full">
+                <div className="w-full h-auto flex flex-col md:flex-col lg:flex-row justify-between gap-10 lg:gap-4 p-5 lg:p-2 ">
+
+                    <div className="w-full lg:w-[35%] h-full bg-gradient-to-r from-slate-700 to-slate-950 p-2 shadow-2xl flex flex-col gap-8 justify-center">
                         <img className="rounded-lg " src={img} alt="" />
-                        <div className="flex flex-col gap-4">
+                        <div className="flex flex-col gap-4 px-5 lg:px-2">
                             <h3 className="text-2xl font-bold text-white">Rabeya Akter</h3>
                             <p className="text-lg font-normal text-gray-400">Bagerhat,Bangladesh.</p>
 
@@ -47,7 +48,10 @@ const Contact = () => {
                                     <a href="https://www.linkedin.com/in/rabeya-akter-52662622a/">
                                         <span className="w-16 h-16 bg-black hover:text-blue-600 hover:bg-black bg-opacity-25 text-gray-200 text-xl inline-flex justify-center items-center rounded-lg"><FaLinkedin></FaLinkedin></span>
                                     </a>
-                                   
+                                    <a href="https://twitter.com/rabeyariya96859?t=PmBXNP1aPyMDrciMh56aUw&s=08&fbclid=IwAR3rFWB6lXHmnwb7WfC0TT2g_VndXUV6R6ZGr7_PgMtwncO55ma7Ac5ddLI">
+                                        <span className="w-16 h-16 bg-black hover:text-blue-600 hover:bg-black bg-opacity-25 text-gray-200 text-xl inline-flex justify-center items-center rounded-lg"><FaTwitter></FaTwitter></span>
+                                    </a>
+
 
                                 </div>
 
@@ -56,7 +60,7 @@ const Contact = () => {
                         </div>
                     </div>
 
-                    <div className="w-[60%] h-full py-10 bg-gradient-to-r from-slate-700 to-slate-950 shadow-2xl flex flex-col gap-8 p-8 rounded-lg">
+                    <div className="w-full lg:w-[60%] h-full py-10 bg-gradient-to-r from-slate-700 to-slate-950 shadow-2xl flex flex-col gap-8 p-8 rounded-lg">
                         <form ref={form} onSubmit={sendEmail} className="w-full" >
                             <div className="flex gap-10 mb-4">
                                 <div className="w-1/2 flex flex-col gap-4">
@@ -65,23 +69,23 @@ const Contact = () => {
                                 </div>
                                 <div className="w-1/2 flex flex-col gap-4">
                                     <p className="text-sm text-gray-400 uppercase">phone number</p>
-                                    <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none" type="text" />
+                                    <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none" type="text" name="from_phone" />
                                 </div>
                             </div>
                             <div >
                                 <p className="text-sm text-gray-400 uppercase">Email</p>
-                                <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-4 " type="email" name="user_email" required/>
+                                <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-4 " type="email" name="from_name" required />
                             </div>
                             <div >
                                 <p className="text-sm text-gray-400 uppercase">Subject</p>
-                                <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-10" type="text" required/>
+                                <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-10" type="text" required />
                             </div>
                             <div >
                                 <p className="text-sm text-gray-400 uppercase">Message</p>
                                 <textarea className="w-full h-48 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-10" name="message" />
                             </div>
                             <div>
-                                <input className='w-full  rounded-lg  border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-10 btn btn-outline border-0 border-b-4 border-l-2  shadow-md shadow-2xl shadow-black ' type="submit" value="Send"/>
+                                <input className='w-full  rounded-lg  border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none mb-10 btn btn-outline border-0 border-b-4 border-l-2  shadow-md shadow-2xl shadow-black ' type="submit" value="Send" />
                             </div>
                         </form>
                     </div>
