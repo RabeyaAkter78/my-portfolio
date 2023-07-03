@@ -5,7 +5,7 @@ import Linkedin from "../../assets/images/Linkedin.png";
 const Footer = () => {
     return (
         <div>
-            <footer className="footer footer-center my-10 rounded  text-yellow-50">
+            <footer className="footer footer-center my-10 rounded  ">
                 <div className="grid grid-flow-col gap-4">
                     <Link to="home" className=" link-hover">Home</Link>
                     <Link to="about" className=" link-hover">About</Link>
@@ -15,12 +15,12 @@ const Footer = () => {
                 </div>
                 <div >
                     <div className="grid grid-flow-col gap-4">
-                        <Link to="https://github.com/RabeyaAkter78">
+                        <a href="https://github.com/RabeyaAkter78">
                             <img className="fill-current" src={github} alt="" />
-                        </Link>
-                        <Link to="https://www.linkedin.com/in/rabeya-akter-52662622a">
+                        </a>
+                        <a href="https://www.linkedin.com/in/rabeya-akter-52662622a">
                             <img className="fill-current" src={Linkedin} alt="" />
-                        </Link>
+                        </a>
 
 
                     </div>

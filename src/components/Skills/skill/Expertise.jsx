@@ -21,7 +21,11 @@ const Expertise = () => {
                 {
                     expertise.map(data => <div key={data._id}
                     >
-                        <div className="w-52 h-48 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow shadow-xl shadow-black rounded flex flex-col justify-center items-center">
+                        <div data-aos="fade-up"
+                            data-aos-delay="50"
+                            data-aos-duration="1000"
+
+                            className="w-52 h-48 group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow shadow-xl shadow-black rounded flex flex-col justify-center items-center">
                             <div className="w-1/2">
                                 <img className="h-full w-full object-cover transition-transform duration-500 group-hover:-rotate-0 group-hover:scale-125 rounded-lg" src={data.image} alt="" />
                             </div>

@@ -26,7 +26,10 @@ const Contact = () => {
                 heading={"contact"}
             ></SectionTitle>
             <div className="w-full">
-                <div className="w-full h-auto flex flex-col md:flex-col lg:flex-row justify-between gap-10 lg:gap-4 p-5 lg:p-2 ">
+                <div data-aos="fade-up"
+                    data-aos-delay="50"
+                    data-aos-duration="1000"
+                    className="w-full h-auto flex flex-col md:flex-col lg:flex-row justify-between gap-10 lg:gap-4 p-5 lg:p-2 ">
 
                     <div className="w-full lg:w-[35%] h-full bg-gradient-to-r from-slate-700 to-slate-950 p-2 shadow-2xl flex flex-col gap-8 justify-center">
                         <img className="rounded-lg " src={img} alt="" />
@@ -48,7 +51,7 @@ const Contact = () => {
                                     <a href="https://www.linkedin.com/in/rabeya-akter-52662622a/">
                                         <span className="w-16 h-16 bg-black hover:text-blue-600 hover:bg-black bg-opacity-25 text-gray-200 text-xl inline-flex justify-center items-center rounded-lg"><FaLinkedin></FaLinkedin></span>
                                     </a>
-                                    <a href="https://twitter.com/rabeyariya96859?t=PmBXNP1aPyMDrciMh56aUw&s=08&fbclid=IwAR3rFWB6lXHmnwb7WfC0TT2g_VndXUV6R6ZGr7_PgMtwncO55ma7Ac5ddLI">
+                                    <a href="https://twitter.com/rabeyariya96859?t=PmBXNP1aPyMDrciMh56aUw&s=08&fbclid=IwAR334O4ZCGiiCSzFYDjCtmwvHEDgNNkkp2iiYYNKVVIod28p42izleWIS7k">
                                         <span className="w-16 h-16 bg-black hover:text-blue-600 hover:bg-black bg-opacity-25 text-gray-200 text-xl inline-flex justify-center items-center rounded-lg"><FaTwitter></FaTwitter></span>
                                     </a>
 
@@ -63,14 +66,14 @@ const Contact = () => {
                     <div className="w-full lg:w-[60%] h-full py-10 bg-gradient-to-r from-slate-700 to-slate-950 shadow-2xl flex flex-col gap-8 p-8 rounded-lg">
                         <form ref={form} onSubmit={sendEmail} className="w-full" >
                             <div className="flex gap-10 mb-4">
-                                <div className="w-1/2 flex flex-col gap-4">
+                                <div className="w-full flex flex-col gap-4">
                                     <p className="text-sm text-gray-400 uppercase">Your Name</p>
                                     <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none" type="text" name="from_name" required />
                                 </div>
-                                <div className="w-1/2 flex flex-col gap-4">
+                                {/* <div className="w-1/2 flex flex-col gap-4">
                                     <p className="text-sm text-gray-400 uppercase">phone number</p>
                                     <input className="w-full h-12 rounded-lg border-b-[1px] border-b-gray-400 bg-slate-600 text-white px-4 active:outline-none" type="text" name="from_phone" />
-                                </div>
+                                </div> */}
                             </div>
                             <div >
                                 <p className="text-sm text-gray-400 uppercase">Email</p>
