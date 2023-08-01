@@ -1,6 +1,7 @@
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import { FaArrowCircleRight, FaArrowDown } from "react-icons/fa";
-import bannerImg from '../../assets/images/banner2.png'
+import bannerImg from '../../assets/images/projects/danceAcademy/logo1.png'
+// import bannerImg from '../../assets/images/banner2.png'
 import resume from '../../assets/images/Resume-Of-Rabeya-Akter (1).pdf'
 import { Link } from 'react-scroll';
 const Banner = () => {
