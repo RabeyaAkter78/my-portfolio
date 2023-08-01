@@ -52,7 +52,7 @@ const About = () => {
 
           <p className="py-6"><span className="text-2xl font-bold" >Projects </span> With six months of hands-on experience as a front-end developer specializing in the MERN stack, I have successfully completed over <span className="text-3xl font bold">20+</span> projects. These projects highlight my expertise in creating impactful user interfaces using React. Please explore the projects section for a closer look at my work.</p>
 
-          <p className="py-6"><span className="text-2xl font-bold" >Contact </span>   Let's connect! Reach me at Phone: <span className="text-lg font-bold">+88 01969 687876</span> or Email:<span className="text-lg font-bold"> rabeyaakter7876@gmail.com</span> . Looking forward to engaging in fruitful discussions and potential collaborations. </p>
+          <p className="py-6"><span className="text-2xl font-bold" >Contact </span>   Let's connect! Reach me at Phone: <span className="text-lg font-bold font-sans">+88 01969 687876</span> or Email:<span className="text-lg font-bold font-sans"> rabeyaakter7876@gmail.com</span> . Looking forward to engaging in fruitful discussions and potential collaborations. </p>
         </div>
       </div>
 

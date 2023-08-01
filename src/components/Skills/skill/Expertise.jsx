@@ -31,7 +31,7 @@ const Expertise = () => {
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-500  "></div>
                             <div className=" absolute inset-0 flex translate-y-[65%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-6">
-                                <h1 className="font-serif  text-3xl font-bold pb-28 text-black">{data.title}</h1>
+                                <h1 className="font-serif  text-3xl font-bold text-black">{data.title}</h1>
                             </div>
                         </div>
 
