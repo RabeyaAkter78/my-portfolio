@@ -44,9 +44,9 @@ const Contact = () => {
                             <p className="text-lg font-normal text-gray-400">Bagerhat,Bangladesh.</p>
 
                             <p className="text-base text-gray-400 flex items-center gap-2"
-                            > Phone: <span className="text-yellow-50">+88 01969-687876</span></p>
+                            > Phone: <span className="text-yellow-50 font-sans">+88 01969-687876</span></p>
                             <p className="text-base text-gray-400 flex items-center gap-2"
-                            > Email: <span className="text-yellow-50">rabeyaakter7876@gmail.com</span></p>
+                            > Email: <span className="text-yellow-50 font-sans">rabeyaakter7876@gmail.com</span></p>
                             <div >
                                 <h2 className="underline text-base uppercase mb-4">Find Me In</h2>
                                 <h3 className=" text-white">Feel Free to Contact Me</h3>
