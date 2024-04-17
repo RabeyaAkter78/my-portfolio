@@ -3,9 +3,9 @@ import img from '../../assets/images/projects/danceAcademy/a.png'
 const About = () => {
   return (
     <section id="about" className="  pt-10 pb-20  border-b-[1px] border-b-black">
-      <SectionTigittle
+      <SectionTitle
         heading={"About me"}
-      ></SectionTigittle>
+      ></SectionTitle>
 
       {/* <div data-aos="fade-up"
         data-aos-delay="50"
