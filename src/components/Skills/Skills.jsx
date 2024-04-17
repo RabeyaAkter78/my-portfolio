@@ -6,7 +6,7 @@ const Skills = () => {
         <section id="skills" className="w-full pt-10 pb-20 px-2 ">
 
             <SectionTitle
-               heading={"my Skills are..."}
+               heading={"my Skills"}
                subHeading={"i have worked with these Technologies:"}
             ></SectionTitle>
 

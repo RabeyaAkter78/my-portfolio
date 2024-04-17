@@ -6,7 +6,7 @@ import resume from '../../assets/images/Resume-Of-Rabeya-Akter (1).pdf'
 import { Link } from 'react-scroll';
 const Banner = () => {
     const [text] = useTypewriter({
-        words: ["Forntend Developer.", "MERN Stack Developer."],
+        words: ["Forntend Developer.", "MERN Stack Developer.", "React JS Developer"],
         loop: true,
         typeSpeed: 20,
         deleteSpeed: 10,
@@ -24,7 +24,7 @@ const Banner = () => {
                 >
                     <div className="flex flex-col gap-5 mb-20 overflow-x-hidden">
                         <h4 className="text-lg uppercase">WELCOME TO My Portfolio!</h4>
-                        <h1 className="text-5xl lg:text-6xl font-bold ">Hi, I'm <span className="text-sky-900">RABEYA AKTER</span></h1>
+                        <h1 className="text-5xl lg:text-6xl font-bold ">Hi, I'm <span className="text-orange-400">RABEYA AKTER</span></h1>
                         <h2 className="text-3xl lg:text-4xl font bold ">A <span>{text}</span>
                             <Cursor
                                 cursorBlinking="false"
@@ -41,10 +41,10 @@ const Banner = () => {
                     data-aos-duration="1000">
                     <div className='my-4 flex lg:flex-row flex-col gap-10 lg:gap-4  items-center '>
                         <div>
-                            <a href={resume} download={resume} className='btn btn-outline border-0 border-b-4 border-l-2 shadow-2xl shadow-black '>Download CV <FaArrowDown /> </a>
+                            <a href={resume} download={resume} className='btn btn-outline border-0 border-b-4 border-orange-400  border-l-2 shadow-2xl shadow-black '>Download CV <FaArrowDown /> </a>
                         </div>
                         <div>
-                            <Link to="contact" className='btn btn-outline border-0 border-b-4 border-l-2 shadow-2xl shadow-black '>Contact<FaArrowCircleRight /> </Link>
+                            <Link to="contact" className='btn btn-outline border-0 border-b-4 border-orange-400 hover:bg-orange-400 border-l-2 shadow-2xl shadow-black '>Contact<FaArrowCircleRight /> </Link>
                         </div>
 
                     </div>
@@ -59,9 +59,13 @@ const Banner = () => {
                 data-aos-delay="50"
                 data-aos-duration="1000"
                 className="p-5 md:w-1/2 md:px-2 flex justify-center items-center relative">
-                <img className=' rounded-full border-0 border-b-8 border-b-black shadow shadow-2xl shadow-gray-700 z-10' src={bannerImg} alt="" />
+                <div data-aos="fade-left"
+                 data-aos-delay="100"
+                 data-aos-duration="2000"
+                >
+                    <img className=' rounded-full border-0 border-b-8 border-b-black shadow shadow-2xl shadow-gray-700 z-10' src={bannerImg} alt="" />
 
-
+                </div>
             </div>
 
 

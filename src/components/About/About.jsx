@@ -3,9 +3,9 @@ import img from '../../assets/images/projects/danceAcademy/a.png'
 const About = () => {
   return (
     <section id="about" className="  pt-10 pb-20  border-b-[1px] border-b-black">
-      <SectionTitle
+      <SectionTigittle
         heading={"About me"}
-      ></SectionTitle>
+      ></SectionTigittle>
 
       {/* <div data-aos="fade-up"
         data-aos-delay="50"
@@ -36,9 +36,12 @@ const About = () => {
           data-aos-delay="50"
           data-aos-duration="1000"
         >
-
-          <div className="flex justify-center items-center relative">
-            <img className='w-72 items-center rounded-full border-0 border-b-8  border-b-black  shadow-2xl shadow-gray-500 z-10 mb-4' src={img} alt="" />
+          <div data-aos="fade-left"
+            data-aos-delay="100"
+            data-aos-duration="2000">
+            <div className="flex justify-center items-center relative">
+              <img className='w-72 items-center rounded-full border-0 border-b-8  border-b-orange-400  shadow-2xl shadow-gray-500 z-10 mb-4' src={img} alt="" />
+            </div>
           </div>
         </div>
 

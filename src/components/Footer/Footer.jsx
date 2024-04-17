@@ -28,7 +28,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="mb-4">
-                    <p>Copyright © 2023 - All right reserved by Rabeya Akter</p>
+                    <p>Copyright © 2024 - All right reserved by Rabeya Akter</p>
                 </div>
             </footer>
         </div>
