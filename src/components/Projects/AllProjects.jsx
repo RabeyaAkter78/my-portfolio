@@ -5,6 +5,8 @@ import "aos/dist/aos.css";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import Aos from "aos";
 import p1 from "../../assets/images/projects/danceAcademy/p1.png";
+import p2 from "../../assets/images/projects/danceAcademy/1.png";
+import p3 from "../../assets/images/projects/danceAcademy/p2.png";
 // 🧠 Sample Projects Array (replace with your real data)
 const projectData = [
   {
@@ -18,7 +20,7 @@ const projectData = [
   },
   {
     _id: 2,
-    image: p1,
+    image: p2,
     heading: "E-Commerce App",
     sub_heading: "React-based shopping platform",
     liveLink: "/project/ecommerce-app",
@@ -27,7 +29,7 @@ const projectData = [
   },
   {
     _id: 3,
-    image: p1,
+    image: p3,
     heading: "Portfolio Website",
     sub_heading: "Personal portfolio built with React",
     liveLink: "/project/portfolio",
