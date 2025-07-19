@@ -1,65 +1,171 @@
 import SectionTitle from "../SectionTitle/SectionTitle";
-import img from '../../assets/images/projects/danceAcademy/a.png'
+import img from "../../assets/images/projects/danceAcademy/img.png";
+
 const About = () => {
   return (
-    <section id="about" className="  pt-10 pb-20  border-b-[1px] border-b-black">
-      <SectionTitle
-        heading={"About me"}
-      ></SectionTitle>
+    <section
+      id="about"
+      className="pt-16 pb-24 border-b border-gray-800 bg-gray-50 dark:bg-gray-900"
+    >
+      <SectionTitle heading="About Me" />
 
-      {/* <div data-aos="fade-up"
-        data-aos-delay="50"
-        data-aos-duration="1000"
-      >
-
-        <div className="bg-base-200 shadow-2xl shadow-black w-full flex justify-center items-center gap-6  ">
-
-          <div>
-            <img src={img} className=" rounded-lg shadow-2xl" />
+      <div className="container mx-auto px-6 md:px-12 lg:px-24">
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-20">
+          {/* Profile Image */}
+          <div
+            data-aos="fade-right"
+            data-aos-delay="150"
+            className="flex-shrink-0"
+          >
+            <div className="relative w-72 h-72 rounded-full overflow-hidden shadow-2xl border-8 border-gradient-to-tr from-orange-400 to-pink-500">
+              <img
+                src={img}
+                alt="Rabeya Akter"
+                className="object-cover w-full h-full"
+              />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-orange-400 to-pink-500 opacity-10 pointer-events-none"></div>
+            </div>
           </div>
-          <div className="">
-            <p className="py-6"><span className="text-2xl font-bold" >Myself</span> Hi, I'm Rabeya Akter From Bagerhat,Bangladesh.I am a creative web developer with expertise in React JS, JavaScript, Tailwind CSS, Bootstrap, HTML, and CSS. I enjoy crafting engaging and user-friendly websites.I hold a Diploma in Computer Engineering from Gopalganj Polytechnic Institute and can communicate fluently in Bangla and English, and have a basic understanding of Hindi. Let's create something amazing together!</p>
 
-            <p className="py-6"><span className="text-2xl font-bold" >Projects </span> With six months of hands-on experience as a front-end developer specializing in the MERN stack, I have successfully completed over <span className="text-3xl font bold">20+</span> projects. These projects highlight my expertise in creating impactful user interfaces using React. Please explore the projects section for a closer look at my work.</p>
+          {/* Text Content */}
+          <div
+            data-aos="fade-left"
+            data-aos-delay="200"
+            className="max-w-xl text-gray-900 dark:text-gray-100"
+          >
+            {/* Intro */}
+            <p className="mb-8 text-lg leading-relaxed">
+              <span className="block text-3xl font-extrabold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-600">
+                Hi, I'm Rabeya Akter
+              </span>
+              I am a dedicated and creative frontend web developer with 1 year of
+              professional experience specializing in React.js, JavaScript,
+              TypeScript, Tailwind CSS, Bootstrap, HTML5, CSS3, and Git. I hold a
+              Diploma in Computer Engineering from Gopalganj Polytechnic Institute.
+              Fluent in Bangla and English, with a working knowledge of Hindi, I
+              excel at building responsive, accessible, and performant web
+              applications.
+            </p>
 
-            <p className="py-6"><span className="text-2xl font-bold" >Contact </span>   Let's connect! Reach me at Phone: <span className="text-lg font-bold">+88 01969 687876</span> or Email:<span className="text-lg font-bold"> rabeyaakter7876@gmail.com</span> . Looking forward to engaging in fruitful discussions and potential collaborations. </p>
-          </div>
+            {/* Experience */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-semibold mb-4 border-b-2 border-orange-400 inline-block">
+                Experience
+              </h3>
+              <ul className="list-disc list-inside space-y-2 text-lg">
+                <li>
+                  Over 1 year of hands-on frontend development, focused on MERN
+                  stack and modern frontend frameworks.
+                </li>
+                <li>
+                  Successfully delivered 20+ web applications featuring
+                  responsive design, clean UI, and seamless user experience.
+                </li>
+                <li>
+                  Collaborated with designers, backend developers, and product
+                  managers to translate requirements into functional,
+                  user-friendly interfaces.
+                </li>
+                <li>
+                  Maintained code quality using version control (Git),
+                  implemented reusable components, and followed best practices.
+                </li>
+                <li>
+                  Optimized applications for performance, accessibility, and
+                  SEO.
+                </li>
+              </ul>
+            </section>
 
+            {/* Skills */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-semibold mb-4 border-b-2 border-pink-600 inline-block">
+                Skills & Technologies
+              </h3>
+              <p className="text-lg mb-2">
+                React.js, JavaScript (ES6+), TypeScript, Tailwind CSS, Bootstrap,
+                HTML5, CSS3, Git & GitHub, REST APIs, Responsive & Mobile-first
+                Design, Redux Toolkit, Context API, Basic Node.js & Express.
+              </p>
+            </section>
 
-        </div>
-      </div> */}
+            {/* Knowledge */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-semibold mb-4 border-b-2 border-orange-400 inline-block">
+                Knowledge & Expertise
+              </h3>
+              <ul className="list-disc list-inside space-y-2 text-lg">
+                <li>Building interactive, accessible, and performant UI components.</li>
+                <li>State management with React hooks, Redux Toolkit, and Context API.</li>
+                <li>Version control with Git and collaborative workflows on GitHub.</li>
+                <li>RESTful API integration and asynchronous data handling.</li>
+                <li>Debugging, testing, and performance optimization techniques.</li>
+                <li>Understanding backend fundamentals with Node.js and Express.</li>
+              </ul>
+            </section>
 
+            {/* Education */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-semibold mb-4 border-b-2 border-pink-600 inline-block">
+                Education
+              </h3>
+              <p className="text-lg">
+                Diploma in Computer Engineering <br />
+                Gopalganj Polytechnic Institute, Bangladesh
+              </p>
+            </section>
 
-      <div className="w-ful h-auto grid grid-cols-1 ">
+            {/* Goal */}
+            <section className="mb-8">
+              <h3 className="text-2xl font-semibold mb-4 border-b-2 border-orange-400 inline-block">
+                Professional Goal
+              </h3>
+              <p className="text-lg leading-relaxed">
+                My goal is to continuously enhance my skills as a frontend developer,
+                contributing to innovative projects that improve user experiences.
+                I aim to master full-stack development, deepen my understanding of
+                scalable architectures, and deliver elegant, efficient web
+                solutions that drive business success.
+              </p>
+            </section>
 
-        <div data-aos="fade-up"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-        >
-          <div data-aos="fade-left"
-            data-aos-delay="100"
-            data-aos-duration="2000">
-            <div className="flex justify-center items-center relative">
-              <img className='w-72 items-center rounded-full border-0 border-b-8  border-b-orange-400  shadow-2xl shadow-gray-500 z-10 mb-4' src={img} alt="" />
+            {/* Projects Summary */}
+            <p className="mb-8 text-lg leading-relaxed border-l-4 border-pink-600 pl-4">
+              I’ve completed{" "}
+              <span className="text-4xl font-extrabold text-pink-600">20+</span>{" "}
+              projects focused on building dynamic and user-friendly MERN stack applications.
+              Feel free to explore my projects section for more details.
+            </p>
+
+            {/* Contact */}
+            <div className="text-lg">
+              <h3 className="text-2xl font-semibold mb-3">Get In Touch</h3>
+              <p className="mb-2">
+                Phone:{" "}
+                <a
+                  href="tel:+8801969687876"
+                  className="font-bold text-orange-500 hover:underline"
+                >
+                  +88 01969 687876
+                </a>
+              </p>
+              <p>
+                Email:{" "}
+                <a
+                  href="mailto:rabeyaakter7876@gmail.com"
+                  className="font-bold text-pink-600 hover:underline"
+                >
+                  rabeyaakter7876@gmail.com
+                </a>
+              </p>
+              <p className="mt-4">
+                I’m always open to discussing new projects, collaborations, or
+                opportunities. Let’s build something amazing together!
+              </p>
             </div>
           </div>
         </div>
-
-        <div
-          data-aos="fade-up"
-          data-aos-delay="90"
-          data-aos-duration="1500"
-
-          className="card p-16 rounded-lg border-0 border-b-2 border-b-neutral-800 shadow-2xl shadow-gray-500 ">
-          <p className="py-6"><span className="text-2xl font-bold" >Myself</span> Hi, I'm Rabeya Akter From Bagerhat,Bangladesh.I am a creative web developer with expertise in React JS, JavaScript, Tailwind CSS, Bootstrap, HTML, and CSS. I enjoy crafting engaging and user-friendly websites.I hold a Diploma in Computer Engineering from Gopalganj Polytechnic Institute and can communicate fluently in Bangla and English, and have a basic understanding of Hindi. Let's create something amazing together!</p>
-
-          <p className="py-6"><span className="text-2xl font-bold" >Projects </span> With six months of hands-on experience as a front-end developer specializing in the MERN stack, I have successfully completed over <span className="text-3xl font bold">20+</span> projects. These projects highlight my expertise in creating impactful user interfaces using React. Please explore the projects section for a closer look at my work.</p>
-
-          <p className="py-6"><span className="text-2xl font-bold" >Contact </span>   Let's connect! Reach me at Phone: <span className="text-lg font-bold font-sans">+88 01969 687876</span> or Email:<span className="text-lg font-bold font-sans"> rabeyaakter7876@gmail.com</span> . Looking forward to engaging in fruitful discussions and potential collaborations. </p>
-        </div>
       </div>
-
-
     </section>
   );
 };

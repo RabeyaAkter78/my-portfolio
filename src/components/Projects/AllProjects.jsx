@@ -1,74 +1,113 @@
-import { useEffect, useState } from "react";
-import SectionTitle from "../SectionTitle/SectionTitle";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FaGithub, FaRegArrowAltCircleUp } from "react-icons/fa";
-import img1 from '../../assets/images/projects/danceAcademy/1.png';
+import "aos/dist/aos.css";
+import SectionTitle from "../SectionTitle/SectionTitle";
+import Aos from "aos";
+import p1 from "../../assets/images/projects/danceAcademy/p1.png";
+// 🧠 Sample Projects Array (replace with your real data)
+const projectData = [
+  {
+    _id: 1,
+    image: p1,
+    heading: "Dance Academy",
+    sub_heading: "A modern platform for dance learners",
+    liveLink: "/project/dance-academy",
+    client: "/github/client-dance",
+    server: "/github/server-dance",
+  },
+  {
+    _id: 2,
+    image: p1,
+    heading: "E-Commerce App",
+    sub_heading: "React-based shopping platform",
+    liveLink: "/project/ecommerce-app",
+    client: "/github/client-ecommerce",
+    server: "/github/server-ecommerce",
+  },
+  {
+    _id: 3,
+    image: p1,
+    heading: "Portfolio Website",
+    sub_heading: "Personal portfolio built with React",
+    liveLink: "/project/portfolio",
+    client: "/github/client-portfolio",
+    server: "/github/server-portfolio",
+  },
+];
+
 const AllProjects = () => {
-    const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/allProjects')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setProjects(data)
-            }
+  return (
+    <div id="projects">
+      <SectionTitle
+        subHeading="Visit my projects and keep your feedback..."
+        heading="My Projects"
+      />
 
-            )
-    }, [])
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
+        {projectData.map((project) => (
+          <div
+            key={project._id}
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="card w-full h-[450px] bg-gradient-to-r from-transparent via-gray-300 to-neutral-700 shadow-2xl rounded-lg transition-transform duration-300 hover:scale-105"
+          >
+            <figure className="w-full h-60 overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.heading}
+                className="w-full h-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500"
+              />
+            </figure>
+            <div className="card-body text-center">
+              <p className="text-white font-semibold">
+                Name: {project.heading}
+              </p>
+              <p className="text-white text-sm">
+                Description: {project.sub_heading}
+              </p>
 
-
-    return (
-        <div>
-            <SectionTitle
-                subHeading={"visit my projects and keep your feedback..."}
-                heading={"My Projects"}
-            ></SectionTitle>
-            <div data-aos="fade-up"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-10 md:gap-8 lg:gap-6 items-center md:ml-16 lg:ml-2 ">
-                {projects.map(data => <div key={data._id}
+              <div className="card-actions justify-center gap-4 mt-4">
+                <Link
+                  to={project.liveLink}
+                  className="tooltip"
+                  data-tip="Live Preview"
                 >
+                  <button className="btn btn-outline border-b-4 border-black shadow text-sky-950">
+                    <FaRegArrowAltCircleUp />
+                  </button>
+                </Link>
 
-                    <div className="card w-72 h-80  md:w-96 md:h-96 bg-slate-400  rounded-lg shadow-2xl bg-gradient-to-r from-transparent via-transparent to-neutral-700  group-hover:bg-gradient-to-b hover:from-gray-500 hover:bg-gray-700 transition-colors duration-1000">
-                        <figure>
-                            <img src={data.image} alt="Project Image" className="rounded-xl w-full h-auto object-cover group-hover:scale-x-150 duration-300 cursor-pointer" />
-                        </figure>
-                        <div className="card-body items-center text-center">
-                            <p className="text-white">Name: {data.heading}</p>
-                            <p className="text-white">Description: {data.sub_heading}</p>
-                            {/* <p className="text-white">Technologies: {data.technologies}</p> */}
+                <Link
+                  to={project.client}
+                  className="tooltip"
+                  data-tip="Client Code"
+                >
+                  <button className="btn btn-outline border-b-4 border-black shadow text-sky-950">
+                    <FaGithub />
+                  </button>
+                </Link>
 
-                            <div className="card-actions flex">
-
-                                <a href={data.liveLink}>
-                                    <button className='tooltip btn btn-outline border-0 border-b-4 border-black  border-l-2 shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Live-preview"><FaRegArrowAltCircleUp></FaRegArrowAltCircleUp></button>
-                                </a>
-
-
-
-                                <a href={data.client}>
-                                    <button className='tooltip btn btn-outline border-0 border-b-4 border-black  border-l-2 shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Client-side"><FaGithub></FaGithub></button>
-                                </a>
-
-                                <a href={data.server}>
-                                    <button className='tooltip btn btn-outline border-0 border-b-4 border-black  border-l-2 shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Server-side"><FaGithub></FaGithub></button>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>)}
-
-
+                <Link
+                  to={project.server}
+                  className="tooltip"
+                  data-tip="Server Code"
+                >
+                  <button className="btn btn-outline border-b-4 border-black shadow text-sky-950">
+                    <FaGithub />
+                  </button>
+                </Link>
+              </div>
             </div>
-
-
-
-        </div>
-    );
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default AllProjects;
