@@ -1,12 +1,19 @@
 import SectionTitle from "../SectionTitle/SectionTitle";
 import img from "../../assets/images/projects/danceAcademy/img.png";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 const About = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // smooth animation
+      once: true, // animation runs only once
+      offset: 120, // offset (in px) from the original trigger point
+    });
+  }, []);
+
   return (
-    <section
-      id="about"
-      className="pt-16 pb-24 border-b border-gray-800 bg-gray-50 dark:bg-gray-900"
-    >
+    <section id="about" className="pt-16 pb-24 border-b ">
       <SectionTitle heading="About Me" />
 
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
@@ -28,11 +35,7 @@ const About = () => {
           </div>
 
           {/* Text Content */}
-          <div
-            data-aos="fade-left"
-            data-aos-delay="200"
-            className="max-w-xl text-gray-900 dark:text-gray-100"
-          >
+          <div data-aos="fade-left" data-aos-delay="200" className="max-w-xl ">
             <p className="mb-8 text-lg leading-relaxed">
               <span className="block text-3xl font-extrabold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-600">
                 Hi, I'm Rabeya Akter
@@ -47,7 +50,7 @@ const About = () => {
             </p>
 
             {/* Knowledge */}
-            <section className="mb-8">
+            <section className="mb-8" data-aos="fade-up" data-aos-delay="100">
               <h3 className="text-2xl font-semibold mb-4 border-b-2 border-orange-400 inline-block">
                 Knowledge & Expertise
               </h3>
@@ -75,7 +78,7 @@ const About = () => {
             </section>
 
             {/* Education */}
-            <section className="mb-8">
+            <section className="mb-8" data-aos="fade-up" data-aos-delay="200">
               <h3 className="text-2xl font-semibold mb-4 border-b-2 border-pink-600 inline-block">
                 Education
               </h3>
@@ -95,9 +98,26 @@ const About = () => {
                 Gopalganj Polytechnic Institute, Gopalganj.
               </p>
             </section>
+            <section className="mb-8" data-aos="fade-up" data-aos-delay="300">
+              <h3 className="text-2xl font-semibold mb-4 border-b-2 border-pink-600 inline-block">
+                Training
+              </h3>
+              <p className="text-lg mb-5">
+                <span className="font-bold">Complete Web Development L-1</span>
+                <br />
+                Programming Hero, Online.
+              </p>
+              <p className="text-lg">
+                <span className="font-bold">
+                  Next Level Web Development, L-2
+                </span>{" "}
+                <br />
+                Programming Hero, Online.
+              </p>
+            </section>
 
             {/* Professional Goal */}
-            <section className="mb-8">
+            <section className="mb-8" data-aos="fade-up" data-aos-delay="400">
               <h3 className="text-2xl font-semibold mb-4 border-b-2 border-orange-400 inline-block">
                 Professional Goal
               </h3>
