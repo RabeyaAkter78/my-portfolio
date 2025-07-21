@@ -51,9 +51,9 @@ const Contact = () => {
                                 <h2 className="underline text-base uppercase mb-4">Find Me In</h2>
                                 <h3 className=" text-white">Feel Free to Contact Me</h3>
                                 <div className="flex  gap-4">
-                                    <a href="https://web.facebook.com/profile.php?id=100067773861189">
+                                    {/* <a href="https://web.facebook.com/profile.php?id=100067773861189">
                                         <span className="w-16 h-16 bg-black hover:text-blue-600 hover:bg-black bg-opacity-25 text-gray-200 text-xl inline-flex justify-center items-center rounded-lg"><FaFacebook></FaFacebook></span>
-                                    </a>
+                                    </a> */}
                                     <a href="https://www.linkedin.com/in/rabeya-akter-52662622a/">
                                         <span className="w-16 h-16 bg-black hover:text-blue-600 hover:bg-black bg-opacity-25 text-gray-200 text-xl inline-flex justify-center items-center rounded-lg"><FaLinkedin></FaLinkedin></span>
                                     </a>
