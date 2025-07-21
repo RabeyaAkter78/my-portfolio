@@ -41,13 +41,13 @@ const Projects = () => {
                         <div className="card-actions flex">
 
                             <a href="https://dance-academy-72a3f.web.app/">
-                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Live-preview"><FaRegArrowAltCircleUp></FaRegArrowAltCircleUp></button>
+                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow-2xl shadow-black text-sky-950' data-tip="Live-preview"><FaRegArrowAltCircleUp></FaRegArrowAltCircleUp></button>
                             </a>
 
 
 
                             <a href="https://github.com/RabeyaAkter78/dance-academy-client">
-                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow shadow-md shadow-2xl shadow-black text-sky-950' data-tip="Client-side"><FaGithub></FaGithub></button>
+                                <button className='tooltip btn btn-outline border-0 border-b-4 border-l-2 shadow-2xl shadow-black text-sky-950' data-tip="Client-side"><FaGithub></FaGithub></button>
                             </a>
 
                             <a href="https://github.com/RabeyaAkter78/dance-academt-server">
