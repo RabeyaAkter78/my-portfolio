@@ -5,12 +5,17 @@
         "image": "expressjs.png"
     },
     {
-        "id": "3",
+        "id": "2",
         "title": "MongoDB",
         "image": "mongodb.png"
     },
     {
         "id": "3",
+        "title": "MongoDB",
+        "image": "mongodb.png"
+    },
+    {
+        "id": "4",
         "title": "Firebase",
         "image": "firebase.png"
     }
