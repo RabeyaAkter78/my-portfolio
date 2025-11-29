@@ -1,6 +1,6 @@
 import SectionTitle from "../SectionTitle/SectionTitle";
 import img from '../../assets/images/projects/danceAcademy/contact.jpg'
-import {  FaLinkedin, FaTwitter, } from "react-icons/fa";
+import {  FaGithub, FaLinkedin, } from "react-icons/fa";
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -12,7 +12,7 @@ const Contact = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_752yot8', 'template_d4qqvbq', form.current, '5_yiMAnfYPHBXCqBp')
+        emailjs.sendForm('service_d4fr67i', 'template_4p7z78v', form.current, 'YfYwkP5jqA14U7iM5')
             .then((result) => {
                 console.log(result.text);
                 setIsFormSubmitted(true);
@@ -48,16 +48,17 @@ const Contact = () => {
                             <p className="text-base text-white flex items-center gap-2"
                             > Email: <span className="text-white font-sans">rabeyaakter7876@gmail.com</span></p>
                             <div >
-                                <h2 className="underline text-white text-base uppercase mb-4">Find Me In</h2>
+                                <h2 className="underline  text-base uppercase mb-4">Find Me In</h2>
                                 <h3 className=" text-white">Feel Free to Contact Me</h3>
                                 <div className="flex  gap-4">
                                
                                     <a href="https://www.linkedin.com/in/rabeya-akter-52662622a/">
                                         <span className="w-16 h-16 bg-black hover:text-blue-600 hover:bg-black bg-opacity-25 text-gray-200 text-xl inline-flex justify-center items-center rounded-lg"><FaLinkedin></FaLinkedin></span>
                                     </a>
-                                    <a href="https://twitter.com/rabeyariya96859?t=PmBXNP1aPyMDrciMh56aUw&s=08&fbclid=IwAR334O4ZCGiiCSzFYDjCtmwvHEDgNNkkp2iiYYNKVVIod28p42izleWIS7k">
-                                        <span className="w-16 h-16 bg-black hover:text-blue-600 hover:bg-black bg-opacity-25 text-gray-200 text-xl inline-flex justify-center items-center rounded-lg"><FaTwitter></FaTwitter></span>
+                                    <a href="https://github.com/RabeyaAkter78">
+                                        <span className="w-16 h-16 bg-black hover:text-blue-600 hover:bg-black bg-opacity-25 text-gray-200 text-xl inline-flex justify-center items-center rounded-lg"><FaGithub></FaGithub></span>
                                     </a>
+        
 
 
                                 </div>
