@@ -2,47 +2,60 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaGithub, FaRegArrowAltCircleUp } from "react-icons/fa";
 import "aos/dist/aos.css";
-import SectionTitle from "../SectionTitle/SectionTitle";
 import Aos from "aos";
+import SectionTitle from "../SectionTitle/SectionTitle";
 import p1 from "../../assets/images/projects/danceAcademy/p1.png";
-import p2 from "../../assets/images/projects/danceAcademy/1.png";
-import p3 from "../../assets/images/projects/danceAcademy/p2.png";
-// 🧠 Sample Projects Array (replace with your real data)
+import p2 from "../../assets/images/projects/danceAcademy/p2.png";
+import p3 from "../../assets/images/projects/danceAcademy/1.png";
+
 const projectData = [
   {
     _id: 1,
+    image: p1,
+    heading: "Qwikr",
+    sub_heading: "An E-Commerce Website",
+    liveLink: "https://qwikr.us/",
+    technology:
+      "Next Js, Typescript, Redux, Ant Design, Framer Motion, Stripe, Geolocation",
+    features: [
+      "Location-based order checking",
+      "Guest checkout system",
+      "Age verification",
+      "Fully responsive design",
+    ],
+    isClientProject: true,
+  },
+  {
+    _id: 2,
     image: p2,
+    heading: "Kurated AI",
+    sub_heading: "An E-Learning Website",
+    liveLink: "https://kurated-ai-one.vercel.app/overalHome",
+    technology:
+      "Next.js, Typescript, Redux, Ant Design, Framer Motion, DnD Toolkit, TailwindCSS",
+    features: [
+      "Google & LinkedIn login",
+      "Drag-and-drop lesson creation",
+      "Practice modules",
+      "Fully responsive design",
+    ],
+    isClientProject: true,
+  },
+  {
+    _id: 3,
+    image: p3,
     heading: "Dance Academy",
-    sub_heading: "E-Learning Platfrom",
+    sub_heading: "E-Learning Platform",
     liveLink: "https://dance-academy-72a3f.web.app/",
     client: "https://github.com/RabeyaAkter78/dance-academy-client",
     server: "https://github.com/RabeyaAkter78/dance-academt-server",
     technology:
-      "Javascript ,React Js, Tailwind, Axios, Firebase, Mongo DB, Express JS, Stripe.",
-  },
-  {
-    _id: 2,
-    image: p1,
-    heading: "SHowFlix",
-    sub_heading: "A Movie Streeming Website",
-    liveLink: "https://movie-series-client.vercel.app/",
-    client: "https://github.com/Moniruzzaman2525/movie-series-client.git",
-    server: "https://github.com/Moniruzzaman2525/movie-series-server.git",
-    admin: "moniurzzaman25@gmail.com",
-    pass: "Manik2525",
-    technology:
-      "Next Js, Typescript, ShadCN UI, Framer Motion, SSL Commerce,PostgreSQL,Prisma ",
-  },
-
-  {
-    _id: 3,
-    image: p3,
-    heading: "BDCraft",
-    sub_heading: "This is a Social Media and E-commerce website",
-    liveLink: "https://bd-craft-client.web.app/",
-    client: "https://github.com/tariik12/bd-crafts-client",
-    server: "https://github.com/Rayhan108/bdCrafts-server",
-    technology: "React, Tailwind, Stripe.js, Firebase Mongo DB, Node.js",
+      "Javascript, React Js, Tailwind, Axios, Firebase, Mongo DB, Express JS, Stripe",
+    features: [
+      "User authentication",
+      "Interactive lessons",
+      "Stripe payment integration",
+    ],
   },
 ];
 
@@ -52,161 +65,75 @@ const AllProjects = () => {
   }, []);
 
   return (
-    <div id="projects" className=" py-12">
+    <div id="projects" className="py-12 bg-gradient-to-r ">
       <SectionTitle
         subHeading="Visit my projects and keep your feedback..."
         heading="My Projects"
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4">
         {projectData.map((project) => (
           <div
             key={project._id}
             data-aos="fade-up"
-            data-aos-delay="100"
-            className="card w-full h-[550px] bg-white shadow-lg rounded-xl border border-gray-200 transition-transform duration-300 hover:scale-105"
+            className="bg-neutral-50 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500 overflow-hidden"
           >
             <figure className="w-full h-60 overflow-hidden rounded-t-xl">
               <img
                 src={project.image}
                 alt={project.heading}
-                className="w-full h-60 object-cover hover:scale-110 transition-transform duration-500"
+                className="w-full h-60 object-cover transition-transform duration-500 hover:scale-105"
               />
             </figure>
-            <div className="card-body text-center px-4 py-6 h-40">
-              <p className="text-gray-800 font-semibold text-lg">
-                {project.heading}
-              </p>
-              <p className="text-gray-600 text-sm mt-1">
-                {project.sub_heading}
-              </p>
-              <p className="text-gray-600 text-sm mt-2">
-                <span className="font-medium">Technology:</span>{" "}
-                {project.technology}
-              </p>
-              {project?.admin && (
-                <>
-                  <p className="text-gray-500 text-sm mt-1">
-                    <span className="font-medium">Admin:</span> {project.admin}
-                  </p>
-                  <p className="text-gray-500 text-sm">
-                    <span className="font-medium">Password:</span>{" "}
-                    {project.pass}
-                  </p>
-                </>
-              )}
 
-              <div className="card-actions justify-center gap-4 mt-4">
-                <Link
-                  to={project.liveLink}
-                  className="tooltip"
-                  data-tip="Live Preview"
-                >
-                  <button className="btn btn-outline border border-primary text-primary hover:bg-primary hover:text-white rounded-full px-4 py-2 transition-all">
-                    <FaRegArrowAltCircleUp />
+            <div className="p-6 flex flex-col justify-between ">
+              <div>
+                <h3 className="text-orange-700 font-bold text-xl">
+                  {project.heading}
+                </h3>
+                <p className="text-orange-500 text-sm mt-1">
+                  {project.sub_heading}
+                </p>
+                <p className="text-gray-700 text-sm mt-2">
+                  <span className="font-semibold">Technology:</span>{" "}
+                  {project.technology}
+                </p>
+                {project.features && (
+                  <ul className="mt-3 text-gray-600 list-disc list-inside space-y-1 text-sm">
+                    {project.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
+              <div className="flex justify-center items-center  gap-3 mt-4">
+                <Link to={project.liveLink} target="_blank">
+                  <button className="bg-orange-500 text-white rounded-md px-4 py-2 flex items-center gap-2 hover:bg-orange-600 transition-all">
+                    <FaRegArrowAltCircleUp /> Live
                   </button>
                 </Link>
-                <Link
-                  to={project.client}
-                  className="tooltip"
-                  data-tip="Client Code"
-                >
-                  <button className="btn btn-outline border border-primary text-primary hover:bg-primary hover:text-white rounded-full px-4 py-2 transition-all">
-                    <FaGithub />
-                  </button>
-                </Link>
-                <Link
-                  to={project.server}
-                  className="tooltip"
-                  data-tip="Server Code"
-                >
-                  <button className="btn btn-outline border border-primary text-primary hover:bg-primary hover:text-white rounded-full px-4 py-2 transition-all">
-                    <FaGithub />
-                  </button>
-                </Link>
+
+                {!project.isClientProject && project.client && (
+                  <Link to={project.client} target="_blank">
+                    <button className="bg-yellow-400 text-white rounded-md px-4 py-2 flex items-center gap-2 hover:bg-yellow-500 transition-all">
+                      <FaGithub /> Client
+                    </button>
+                  </Link>
+                )}
+                {!project.isClientProject && project.server && (
+                  <Link to={project.server} target="_blank">
+                    <button className="bg-yellow-400 text-white rounded-md px-4 py-2 flex items-center gap-2 hover:bg-yellow-500 transition-all">
+                      <FaGithub /> Server
+                    </button>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
-
-    // <div id="projects">
-    //   <SectionTitle
-    //     subHeading="Visit my projects and keep your feedback..."
-    //     heading="My Projects"
-    //   />
-
-    //   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 p-4">
-    //     {projectData.map((project) => (
-    //       <div
-    //         key={project._id}
-    //         data-aos="fade-up"
-    //         data-aos-delay="100"
-    //         className="card w-full h-[450px] bg-gradient-to-r from-transparent via-gray-300 to-neutral-700 shadow-2xl rounded-lg transition-transform duration-300 hover:scale-105"
-    //       >
-    //         <figure className="w-full h-60 overflow-hidden">
-    //           <img
-    //             src={project.image}
-    //             alt={project.heading}
-    //             className="w-full h-full object-cover rounded-t-lg hover:scale-110 transition-transform duration-500"
-    //           />
-    //         </figure>
-    //         <div className="card-body text-center">
-    //           <p className="text-white font-semibold">
-    //             Name: {project.heading}
-    //           </p>
-    //           <p className="text-white ">
-    //             Technology: {project.technology}
-    //           </p>
-    //           <p className="text-white text-sm">
-    //             Description: {project.sub_heading}
-    //           </p>
-    //           {project?.admin ? (
-    //             <>
-    //               <p className="text-white text-sm">Admin: {project.admin}</p>
-    //               <p className="text-white text-sm">Password: {project.pass}</p>
-    //             </>
-    //           ) : (
-    //             ""
-    //           )}
-
-    //           <div className="card-actions justify-center gap-4 mt-4">
-    //             <Link
-    //               to={project.liveLink}
-    //               className="tooltip"
-    //               data-tip="Live Preview"
-    //             >
-    //               <button className="btn btn-outline border-b-4 border-black shadow text-sky-950">
-    //                 <FaRegArrowAltCircleUp />
-    //               </button>
-    //             </Link>
-
-    //             <Link
-    //               to={project.client}
-    //               className="tooltip"
-    //               data-tip="Client Code"
-    //             >
-    //               <button className="btn btn-outline border-b-4 border-black shadow text-sky-950">
-    //                 <FaGithub />
-    //               </button>
-    //             </Link>
-
-    //             <Link
-    //               to={project.server}
-    //               className="tooltip"
-    //               data-tip="Server Code"
-    //             >
-    //               <button className="btn btn-outline border-b-4 border-black shadow text-sky-950">
-    //                 <FaGithub />
-    //               </button>
-    //             </Link>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
   );
 };
 
