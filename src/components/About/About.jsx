@@ -37,7 +37,7 @@ const About = () => {
           {/* Text Content */}
           <div data-aos="fade-left" data-aos-delay="200" className="max-w-xl ">
             <p className="mb-8 text-lg leading-relaxed">
-              <span className="block text-3xl font-extrabold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-600">
+              <span className="block text-3xl font-extrabold mb-3 text-transparent bg-clip-text bg-gradient-to-r from-primary to-pink-600">
                 Hi, I'm Rabeya Akter
               </span>
               I am a dedicated and creative web developer with 1 year of

@@ -1,6 +1,6 @@
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { FaArrowCircleRight, FaArrowDown } from "react-icons/fa";
-import bannerImg from "../../assets/images/projects/danceAcademy/logo1.png";
+import bannerImg from "../../assets/images/projects/danceAcademy/logo.png";
 // import bannerImg from '../../assets/images/banner2.png'
 import resume from "../../assets/images/Resume-Of-Rabeya-Akter (1).pdf";
 import { Link } from "react-scroll";
@@ -27,7 +27,7 @@ const Banner = () => {
           <div className="flex flex-col gap-5 mb-20 overflow-x-hidden">
             <h4 className="text-lg uppercase">WELCOME TO My Portfolio!</h4>
             <h1 className="text-5xl lg:text-6xl font-bold ">
-              Hi, I'm <span className="text-orange-400">RABEYA AKTER</span>
+              Hi, I'm <span className="text-primary">RABEYA AKTER</span>
             </h1>
             <h2 className="text-3xl lg:text-4xl font bold ">
               A <span>{text}</span>
@@ -47,7 +47,7 @@ const Banner = () => {
               <a
                 href={resume}
                 download={resume}
-                className="btn btn-outline border-0 border-b-4 border-orange-400  border-l-2 shadow-2xl shadow-black "
+                className="btn btn-outline border-0 border-b-4 border-primatext-primary hover:bg-primary text-primary border-l-2 shadow-2xl shadow-black  "
               >
                 Download CV <FaArrowDown />{" "}
               </a>
@@ -55,7 +55,7 @@ const Banner = () => {
             <div>
               <Link
                 to="contact"
-                className="btn btn-outline border-0 border-b-4 border-orange-400 hover:bg-orange-400 border-l-2 shadow-2xl shadow-black "
+                className="btn btn-outline border-0 border-b-4 border-primatext-primary hover:bg-primary text-primary border-l-2 shadow-2xl shadow-black "
               >
                 Contact
                 <FaArrowCircleRight />{" "}

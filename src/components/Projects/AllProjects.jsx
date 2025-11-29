@@ -102,7 +102,7 @@ const AllProjects = () => {
                   className="tooltip"
                   data-tip="Live Preview"
                 >
-                  <button className="btn btn-outline border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-full px-4 py-2 transition-all">
+                  <button className="btn btn-outline border border-primary text-primary hover:bg-primary hover:text-white rounded-full px-4 py-2 transition-all">
                     <FaRegArrowAltCircleUp />
                   </button>
                 </Link>
@@ -111,7 +111,7 @@ const AllProjects = () => {
                   className="tooltip"
                   data-tip="Client Code"
                 >
-                  <button className="btn btn-outline border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-full px-4 py-2 transition-all">
+                  <button className="btn btn-outline border border-primary text-primary hover:bg-primary hover:text-white rounded-full px-4 py-2 transition-all">
                     <FaGithub />
                   </button>
                 </Link>
@@ -120,7 +120,7 @@ const AllProjects = () => {
                   className="tooltip"
                   data-tip="Server Code"
                 >
-                  <button className="btn btn-outline border border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white rounded-full px-4 py-2 transition-all">
+                  <button className="btn btn-outline border border-primary text-primary hover:bg-primary hover:text-white rounded-full px-4 py-2 transition-all">
                     <FaGithub />
                   </button>
                 </Link>
