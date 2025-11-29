@@ -8,7 +8,7 @@ const Skills = () => {
         subHeading={"i have worked with these Technologies:"}
       ></SectionTitle>
 
-      <div className="flex items-center justify-center  ">
+      <div className=" ">
         <Expertise></Expertise>
       </div>
     </section>
