@@ -7,6 +7,9 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 import p1 from "../../assets/images/projects/danceAcademy/p1.png";
 import p2 from "../../assets/images/projects/danceAcademy/p2.png";
 import p3 from "../../assets/images/projects/danceAcademy/1.png";
+import p4 from "../../assets/images/projects/vitakinetic.png";
+import p5 from "../../assets/images/projects/portfolio.png";
+import p6 from "../../assets/images/projects/dashboard.png";
 
 const projectData = [
   {
@@ -85,11 +88,11 @@ const projectData = [
   },
   {
     _id: 4,
-    image: p1,
+    image: p4,
     heading: "Vitakinetic",
     sub_heading: "Fitness & Wellness Platform",
     category: "Health & Fitness",
-    liveLink: "https://vitakinetic.vercel.app/",
+    liveLink: "https://vitakinetic-trainer.vercel.app/",
     technology: [
       "Next.js",
       "TypeScript",
@@ -108,19 +111,13 @@ const projectData = [
   },
   {
     _id: 5,
-    image: p2,
+    image: p5,
     heading: "Portfolio Website",
     sub_heading: "Personal Portfolio",
     category: "Portfolio",
     liveLink: "#",
-    client: "https://github.com/RabeyaAkter78/my-portfolio",
-    technology: [
-      "React.js",
-      "Tailwind CSS",
-      "Framer Motion",
-      "AOS",
-      "EmailJS",
-    ],
+    client: "https://rabeya-akter-portfolio.vercel.app/",
+    technology: ["React.js", "Tailwind CSS", "Framer Motion", "AOS", "EmailJS"],
     features: [
       "Modern dark theme design",
       "Smooth animations & transitions",
@@ -131,25 +128,25 @@ const projectData = [
   },
   {
     _id: 6,
-    image: p3,
-    heading: "Task Management App",
+    image: p6,
+    heading: "Cresent Change Task Manager",
     sub_heading: "Productivity Application",
-    category: "Productivity",
-    liveLink: "https://task-app-demo.vercel.app/",
-    client: "https://github.com/RabeyaAkter78/task-manager",
+    category: "Dashboard",
+    liveLink: "https://org.crescentchange.com/",
+    // client: "https://github.com/RabeyaAkter78/task-manager",
     technology: [
       "React.js",
       "Redux Toolkit",
       "Node.js",
       "Express.js",
       "MongoDB",
-      "Socket.io",
+      // "Socket.io",
     ],
     features: [
-      "Real-time collaboration",
-      "Drag-and-drop tasks",
-      "User authentication",
-      "Team workspaces",
+      "Donation management",
+      "Donor & volunteer tracking",
+      "Deposit management",
+      "Subscription & recurring donations",
     ],
     isClientProject: false,
   },
@@ -161,7 +158,7 @@ const categories = [
   "E-Learning",
   "Health & Fitness",
   "Portfolio",
-  "Productivity",
+  "Dashboard",
 ];
 
 const cardVariants = {
@@ -226,7 +223,10 @@ const AllProjects = () => {
 
       {/* Projects Grid */}
       <div className="max-w-7xl mx-auto">
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <motion.div
+          layout
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -282,7 +282,9 @@ const AllProjects = () => {
                     <h3 className="text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">
                       {project.heading}
                     </h3>
-                    <p className="text-gray-400 text-sm mb-3">{project.sub_heading}</p>
+                    <p className="text-gray-400 text-sm mb-3">
+                      {project.sub_heading}
+                    </p>
 
                     {/* Technologies */}
                     <div className="flex flex-wrap gap-2 mb-4">
