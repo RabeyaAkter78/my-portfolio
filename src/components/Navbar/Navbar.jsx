@@ -1,79 +1,148 @@
 import { useEffect, useState } from 'react';
-// import logo from '../../assets/images/logo.png'
 import { Link } from 'react-scroll';
-import './navbar.css';
+import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
-    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : "light");
+    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
         localStorage.setItem('theme', theme);
-        const localTheme = localStorage.getItem('theme');
-        document.querySelector("html").setAttribute('data-theme', localTheme);
-
-    }, [theme])
-
-    const handleToggle = (e) => {
-        if (e.target.checked) {
-            setTheme("light");
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
         }
-        else {
-            setTheme("dark");
-        }
-    }
+    }, [theme]);
 
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
+    const toggleTheme = () => {
+        setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+    };
 
-    const navOptions = <>
+    const navLinks = [
+        { to: 'home', label: 'Home' },
+        { to: 'about', label: 'About' },
+        { to: 'experience', label: 'Experience' },
+        { to: 'skills', label: 'Skills' },
+        { to: 'services', label: 'Services' },
+        { to: 'projects', label: 'Projects' },
+        { to: 'testimonials', label: 'Clients' },
+        { to: 'blogs', label: 'Blogs' },
+        { to: 'contact', label: 'Contact' },
+    ];
 
-        {/* TODO :Add Active class  */}
-        <li><Link to="home">HOME</Link></li>
-        <li><Link to="about">ABOUT</Link></li>
-        <li><Link to="skills">SKILLS</Link></li>
-        <li><Link to="projects" >PROJECTS</Link></li>
-        <li><Link to="contact">CONTACT</Link></li>
-    </>
     return (
+        <motion.nav
+            initial={{ y: -100 }}
+            animate={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                isScrolled 
+                    ? 'bg-gray-900/95 backdrop-blur-md shadow-lg shadow-black/20' 
+                    : 'bg-transparent'
+            }`}
+        >
+            <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex items-center justify-between h-16 md:h-20">
+                    {/* Logo */}
+                    <motion.a
+                        href="#home"
+                        className="text-xl md:text-2xl font-bold bg-gradient-to-r from-primary to-purple-500 bg-clip-text text-transparent"
+                        whileHover={{ scale: 1.05 }}
+                    >
+                        Rabeya Akter
+                    </motion.a>
 
-        <div className='sticky top-0 z-50 bg-[#4e179b]  text-white'>
-            <div className="navbar font-bold max-w-screen-xl mx-auto ">
-                <div className="navbar-start">
-                    <div className="dropdown ">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden ">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-                        </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  rounded-box w-52 bg-black bg-opacity-40 text-white">
-                            {navOptions}
-                        </ul>
+                    {/* Desktop Navigation */}
+                    <div className="hidden lg:flex items-center gap-1">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.to}
+                                to={link.to}
+                                spy={true}
+                                smooth={true}
+                                offset={-80}
+                                duration={500}
+                                activeClass="text-primary"
+                                className="px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors cursor-pointer relative group"
+                            >
+                                {link.label}
+                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300" />
+                            </Link>
+                        ))}
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl"><strong><em>Rabeya Akter</em></strong></a>
 
-                </div>
-                <div className="navbar-center hidden lg:flex ">
-                    <ul className="menu menu-horizontal px-1 ">
-                        {navOptions}
-                    </ul>
-                </div>
-                <div className="navbar-end">
-                    <li className='list-none' >
-                        <label className="swap swap-rotate ml-4 mt-2 h-[15px] w-[15px]">
+                    {/* Theme Toggle & Mobile Menu Button */}
+                    <div className="flex items-center gap-4">
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
+                            aria-label="Toggle theme"
+                        >
+                            {theme === 'dark' ? (
+                                <FaSun className="w-5 h-5 text-yellow-400" />
+                            ) : (
+                                <FaMoon className="w-5 h-5 text-gray-400" />
+                            )}
+                        </button>
 
-                            {/* this hidden checkbox controls the state */}
-                            <input type="checkbox" onChange={handleToggle}
-                                checked={theme === "dark" ? false : true}
-                            />
-
-                            {/* sun icon */}
-                            <svg className="swap-on fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" /></svg>
-
-                            {/* moon icon */}
-                            <svg className="swap-off fill-current w-10 h-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" /></svg>
-
-                        </label>
-                    </li>
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            className="lg:hidden p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
+                            aria-label="Toggle menu"
+                        >
+                            {isMenuOpen ? (
+                                <FaTimes className="w-5 h-5" />
+                            ) : (
+                                <FaBars className="w-5 h-5" />
+                            )}
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
+
+            {/* Mobile Menu */}
+            <AnimatePresence>
+                {isMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="lg:hidden bg-gray-900/98 backdrop-blur-md border-t border-gray-800"
+                    >
+                        <div className="px-4 py-4 space-y-2">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.to}
+                                    to={link.to}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={500}
+                                    onClick={() => setIsMenuOpen(false)}
+                                    className="block px-4 py-3 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-lg transition-all cursor-pointer"
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </motion.nav>
     );
 };
 
