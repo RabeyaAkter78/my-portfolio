@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useEffect } from "react";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { FaArrowCircleRight, FaArrowDown, FaGithub, FaLinkedin } from "react-icons/fa";

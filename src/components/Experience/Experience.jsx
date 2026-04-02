@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { motion } from "framer-motion";
 import { FaBriefcase, FaCalendarAlt, FaMapMarkerAlt } from "react-icons/fa";
 import SectionTitle from "../SectionTitle/SectionTitle";
@@ -22,23 +23,23 @@ const experiences = [
     ],
     technologies: ["Next.js", "React.js", "TypeScript", "Redux", "Tailwind CSS", "Ant Design"],
   },
-  {
-    id: 2,
-    role: "Frontend Developer Intern",
-    company: "Programming Hero",
-    location: "Remote",
-    duration: "Jan 2024 – Jul 2024",
-    type: "Internship",
-    description:
-      "Completed intensive training in modern web development and contributed to real-world projects.",
-    responsibilities: [
-      "Mastered React.js, Next.js, and modern JavaScript (ES6+)",
-      "Built full-stack applications using MERN stack",
-      "Implemented authentication systems and payment integrations",
-      "Practiced clean code principles and best practices",
-    ],
-    technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Firebase"],
-  },
+  // {
+  //   id: 2,
+  //   role: "Frontend Developer Intern",
+  //   company: "Programming Hero",
+  //   location: "Remote",
+  //   duration: "Jan 2024 – Jul 2024",
+  //   type: "Internship",
+  //   description:
+  //     "Completed intensive training in modern web development and contributed to real-world projects.",
+  //   responsibilities: [
+  //     "Mastered React.js, Next.js, and modern JavaScript (ES6+)",
+  //     "Built full-stack applications using MERN stack",
+  //     "Implemented authentication systems and payment integrations",
+  //     "Practiced clean code principles and best practices",
+  //   ],
+  //   technologies: ["React.js", "Node.js", "MongoDB", "Express.js", "Firebase"],
+  // },
 ];
 
 const containerVariants = {
