@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
-import { FaSun, FaMoon, FaBars, FaTimes } from 'react-icons/fa';
+import {  FaBars, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
-    const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
+    // const [theme, setTheme] = useState(localStorage.getItem('theme') || 'dark');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
-    useEffect(() => {
-        localStorage.setItem('theme', theme);
-        document.documentElement.setAttribute('data-theme', theme);
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
-    }, [theme]);
+    // useEffect(() => {
+    //     localStorage.setItem('theme', theme);
+    //     document.documentElement.setAttribute('data-theme', theme);
+    //     if (theme === 'dark') {
+    //         document.documentElement.classList.add('dark');
+    //     } else {
+    //         document.documentElement.classList.remove('dark');
+    //     }
+    // }, [theme]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -26,9 +26,9 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const toggleTheme = () => {
-        setTheme(prev => prev === 'dark' ? 'light' : 'dark');
-    };
+    // const toggleTheme = () => {
+    //     setTheme(prev => prev === 'dark' ? 'light' : 'dark');
+    // };
 
     const navLinks = [
         { to: 'home', label: 'Home' },
@@ -37,8 +37,8 @@ const Navbar = () => {
         { to: 'skills', label: 'Skills' },
         { to: 'services', label: 'Services' },
         { to: 'projects', label: 'Projects' },
-        { to: 'testimonials', label: 'Clients' },
-        { to: 'blogs', label: 'Blogs' },
+        // { to: 'testimonials', label: 'Clients' },
+        // { to: 'blogs', label: 'Blogs' },
         { to: 'contact', label: 'Contact' },
     ];
 
@@ -85,7 +85,7 @@ const Navbar = () => {
 
                     {/* Theme Toggle & Mobile Menu Button */}
                     <div className="flex items-center gap-4">
-                        <button
+                        {/* <button
                             onClick={toggleTheme}
                             className="p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors"
                             aria-label="Toggle theme"
@@ -95,7 +95,7 @@ const Navbar = () => {
                             ) : (
                                 <FaMoon className="w-5 h-5 text-gray-400" />
                             )}
-                        </button>
+                        </button> */}
 
                         {/* Mobile Menu Button */}
                         <button
