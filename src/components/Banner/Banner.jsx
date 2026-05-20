@@ -82,7 +82,7 @@ const Banner = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-gray-400 text-lg leading-relaxed max-w-xl"
           >
-            Front-End Developer with 1.5+ years of professional experience building modern, 
+            Front-End Developer with 2+ years of professional experience building modern, 
             scalable web applications using React.js and Next.js. Passionate about creating 
             intuitive, user-friendly digital experiences with secure authentication and optimized performance.
           </motion.p>
@@ -170,7 +170,7 @@ const Banner = () => {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -top-4 -right-4 px-4 py-2 rounded-full bg-gray-800 border border-gray-700 shadow-lg"
             >
-              <span className="text-primary font-bold">1.5+ Years</span>
+              <span className="text-primary font-bold">2+ Years</span>
               <span className="text-gray-400 text-xs block">Experience</span>
             </motion.div>
 

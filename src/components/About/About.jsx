@@ -11,7 +11,7 @@ const aboutData = [
     icon: FaUser,
     title: "Hi, I'm Rabeya Akter",
     content:
-      "I am a dedicated and creative web developer with 1.5+ years of professional experience, specializing in React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, Ant Design, HTML5, CSS3, and Git. I am currently studying Computer Science and Engineering at Northern University Bangladesh. Fluent in Bangla and English, with working knowledge of Hindi, I excel at building responsive, accessible, and performant web applications.",
+      "I am a dedicated and creative web developer with 2+ years of professional experience, specializing in React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, Ant Design, HTML5, CSS3, and Git. I am currently studying Computer Science and Engineering at Northern University Bangladesh. Fluent in Bangla and English, with working knowledge of Hindi, I excel at building responsive, accessible, and performant web applications.",
   },
   {
     id: 2,
@@ -105,9 +105,9 @@ const About = () => {
           className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {[
-            { value: "1.5+", label: "Years Experience" },
+            { value: "2+", label: "Years Experience" },
             { value: "25+", label: "Projects Completed" },
-            { value: "15+", label: "Happy Clients" },
+            { value: "30+", label: "Happy Clients" },
             { value: "100%", label: "Commitment" },
           ].map((stat, index) => (
             <div
