@@ -5,7 +5,7 @@ import {
   FaLinkedin,
   FaTwitter,
   FaEnvelope,
-  FaHeart,
+
   FaArrowUp,
 } from "react-icons/fa";
 
@@ -110,7 +110,7 @@ const Footer = () => {
                 rabeyaakter7876@gmail.com
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
-                <span className="w-4 h-4 flex items-center justify-center text-primary">📱</span>
+                <span className="w-4 h-4 flex items-center justify-center text-primary">📞</span>
                 +88 01969-687876
               </li>
               <li className="flex items-center gap-3 text-gray-400 text-sm">
@@ -125,12 +125,12 @@ const Footer = () => {
         <div className="my-8 h-px bg-gradient-to-r from-transparent via-gray-700 to-transparent" />
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-gray-400 text-sm flex items-center gap-1">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          {/* <p className="text-gray-400 text-sm flex items-center gap-1">
             Made with <FaHeart className="w-4 h-4 text-red-500" /> by Rabeya Akter
-          </p>
+          </p> */}
           <p className="text-gray-500 text-sm">
-            {new Date().getFullYear()} All rights reserved.
+            {new Date().getFullYear()} All rights reserved @ Rabeya Akter.
           </p>
 
           {/* Back to top button */}
