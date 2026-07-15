@@ -4,8 +4,8 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import SectionTitle from "../SectionTitle/SectionTitle";
-import p1 from "../../assets/images/projects/danceAcademy/p1.png";
-import p2 from "../../assets/images/projects/danceAcademy/p2.png";
+// import p1 from "../../assets/images/projects/danceAcademy/p1.png";
+// import p2 from "../../assets/images/projects/danceAcademy/p2.png";
 import p3 from "../../assets/images/projects/danceAcademy/1.png";
 import p4 from "../../assets/images/projects/vitakinetic.png";
 import p5 from "../../assets/images/projects/portfolio.png";
@@ -20,56 +20,80 @@ import p13 from "../../assets/images/projects/p13.png";
 import p14 from "../../assets/images/projects/p14.png";
 
 const projectData = [
-  {
-    _id: 1,
-    image: p1,
-    heading: "Qwikr",
-    sub_heading: "An E-Commerce Website",
-    category: "E-Commerce",
-    liveLink: "https://qwikr.us/",
-    technology: [
-      "Next.js",
-      "TypeScript",
-      "Redux",
-      "Ant Design",
-      "Framer Motion",
-      "Stripe",
-      "Geolocation",
-    ],
-    features: [
-      "Location-based order checking",
-      "Guest checkout system",
-      "Age verification",
-      "Fully responsive design",
-    ],
-    isClientProject: true,
-  },
-  {
-    _id: 2,
-    image: p2,
-    heading: "Kurated AI",
-    sub_heading: "An E-Learning Website",
-    category: "E-Learning",
-    liveLink: "https://kurated-ai-one.vercel.app/overalHome",
-    technology: [
-      "Next.js",
-      "TypeScript",
-      "Redux",
-      "Ant Design",
-      "Framer Motion",
-      "DnD Toolkit",
-      "TailwindCSS",
-    ],
-    features: [
-      "Google & LinkedIn login",
-      "Drag-and-drop lesson creation",
-      "Practice modules",
-      "Fully responsive design",
-    ],
-    isClientProject: true,
-  },
+  // {
+  //   _id: 1,
+  //   image: p1,
+  //   heading: "Qwikr",
+  //   sub_heading: "An E-Commerce Website",
+  //   category: "E-Commerce",
+  //   liveLink: "https://qwikr.us/",
+  //   technology: [
+  //     "Next.js",
+  //     "TypeScript",
+  //     "Redux",
+  //     "Ant Design",
+  //     "Framer Motion",
+  //     "Stripe",
+  //     "Geolocation",
+  //   ],
+  //   features: [
+  //     "Location-based order checking",
+  //     "Guest checkout system",
+  //     "Age verification",
+  //     "Fully responsive design",
+  //   ],
+  //   isClientProject: true,
+  // },
+  // {
+  //   _id: 2,
+  //   image: p2,
+  //   heading: "Kurated AI",
+  //   sub_heading: "An E-Learning Website",
+  //   category: "E-Learning",
+  //   liveLink: "https://kurated-ai-one.vercel.app/overalHome",
+  //   technology: [
+  //     "Next.js",
+  //     "TypeScript",
+  //     "Redux",
+  //     "Ant Design",
+  //     "Framer Motion",
+  //     "DnD Toolkit",
+  //     "TailwindCSS",
+  //   ],
+  //   features: [
+  //     "Google & LinkedIn login",
+  //     "Drag-and-drop lesson creation",
+  //     "Practice modules",
+  //     "Fully responsive design",
+  //   ],
+  //   isClientProject: true,
+  // },
+
   {
     _id: 3,
+    image: p4,
+    heading: "Vitakinetic",
+    sub_heading: "Fitness & Wellness Platform",
+    category: "Health & Fitness",
+    liveLink: "https://vitakinetic.com/",
+    technology: [
+      "Next.js",
+      "TypeScript",
+      "Redux",
+      "Ant Design",
+      "Framer Motion",
+    ],
+    features: [
+      "Multi-role platform for users and trainers",
+      "Onboarding & authentication",
+      "Trainers & gyms discovery",
+      "Products, newsfeed, purchases",
+      "Trainer dashboard with program management",
+    ],
+    isClientProject: true,
+  },
+    {
+    _id: 4,
     image: p3,
     heading: "Dance Academy",
     sub_heading: "E-Learning Platform",
@@ -93,29 +117,6 @@ const projectData = [
       "Stripe payment integration",
     ],
     isClientProject: false,
-  },
-  {
-    _id: 4,
-    image: p4,
-    heading: "Vitakinetic",
-    sub_heading: "Fitness & Wellness Platform",
-    category: "Health & Fitness",
-    liveLink: "https://vitakinetic.com/",
-    technology: [
-      "Next.js",
-      "TypeScript",
-      "Redux",
-      "Ant Design",
-      "Framer Motion",
-    ],
-    features: [
-      "Multi-role platform for users and trainers",
-      "Onboarding & authentication",
-      "Trainers & gyms discovery",
-      "Products, newsfeed, purchases",
-      "Trainer dashboard with program management",
-    ],
-    isClientProject: true,
   },
   {
     _id: 5,
