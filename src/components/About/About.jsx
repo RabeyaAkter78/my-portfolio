@@ -11,7 +11,7 @@ const aboutData = [
     icon: FaUser,
     title: "Hi, I'm Rabeya Akter",
     content:
-      "I am a dedicated and creative web developer with 2+ years of professional experience, specializing in React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, Ant Design, HTML5, CSS3, and Git. I am currently studying Computer Science and Engineering at Northern University Bangladesh. Fluent in Bangla and English, with working knowledge of Hindi, I excel at building responsive, accessible, and performant web applications.",
+      "I am a dedicated and creative web developer with 2.5+ years of professional experience, specializing in React.js, Next.js, JavaScript, TypeScript, Tailwind CSS, Ant Design, HTML5, CSS3, and Git. I am currently studying Computer Science and Engineering at Northern University Bangladesh. Fluent in Bangla and English, with working knowledge of Hindi, I excel at building responsive, accessible, and performant web applications.",
   },
   {
     id: 2,

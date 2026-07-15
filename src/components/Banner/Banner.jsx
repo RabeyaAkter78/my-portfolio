@@ -170,7 +170,7 @@ const Banner = () => {
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className="absolute -top-4 -right-4 px-4 py-2 rounded-full bg-gray-800 border border-gray-700 shadow-lg"
             >
-              <span className="text-primary font-bold">2+ Years</span>
+              <span className="text-primary font-bold">2.5+ Years</span>
               <span className="text-gray-400 text-xs block">Experience</span>
             </motion.div>
 
